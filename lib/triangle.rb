@@ -39,11 +39,11 @@ class Triangle
           if a ==b && b==c
             return :equilateral
           elsif a ==b
-            return :isoceles
+            return :isosceles
           elsif  b==c
-            return :isoceles
+            return :isosceles
           elsif a==c
-            return :isoceles
+            return :isosceles
           else
             return :scalene
           end
