@@ -3,9 +3,7 @@ class Triangle
   # write code here
   def initialize(one,two,three)
     @sides = []
-    @sides << one 
-    @sides << two 
-    @sides << three
+    @sides << one,two,three 
   end
 
   def sides
