@@ -28,12 +28,21 @@ class Triangle
       if sum[2] <=self.sides[0]
         raise TriangleError
 
-      self.sides.combination(2).to_a.select do
-          |a,b| a==b
-      end
-
-
-
+      self.sides.combination(3).to_a.each do
+          |a,b,c|
+          if a ==b && b==c 
+            return :equilateral
+          elsif a ==b 
+            return :isoceles
+          elsif  b==c
+            return :isoceles
+          elsif a==c
+            return :isoceles
+          else
+            return :scalene
+          end
+        end
+        
       end
     end
 
