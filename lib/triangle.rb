@@ -16,6 +16,7 @@ class Triangle
       |side| if side < 0
         raise TriangleError
       end
+    end
 
       sum = self.sides.combination(2).to_a.map do
         |a,b| a+b
