@@ -11,20 +11,31 @@ class Triangle
   end
 
   def kind
-    
+
     self.sides.each do
       |side| if side < 0
         raise TriangleError
       end
 
-      self.sides.combination(2).to_a.map do
+      sum = self.sides.combination(2).to_a.map do
         |a,b| a+b
       end
-      end  
+
+      if sum[0] <=self.sides[2]
+        raise TriangleError
+      if sum[1] <=self.sides[1]
+        raise TriangleError
+      if sum[2] <=self.sides[0]
+        raise TriangleError
+
+        
+
+        
+      end
     end
 
-    
-        
+
+
   end
 
   class TriangleError < StandardError
