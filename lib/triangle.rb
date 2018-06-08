@@ -3,7 +3,7 @@ class Triangle
   # write code here
   def initialize(one,two,three)
     @sides = []
-    @sides << one,two,three 
+    @sides << one,two,three
   end
 
   def sides
@@ -30,9 +30,9 @@ class Triangle
 
       self.sides.combination(3).to_a.each do
           |a,b,c|
-          if a ==b && b==c 
+          if a ==b && b==c
             return :equilateral
-          elsif a ==b 
+          elsif a ==b
             return :isoceles
           elsif  b==c
             return :isoceles
@@ -42,14 +42,15 @@ class Triangle
             return :scalene
           end
         end
-        
+
       end
     end
 
 
 
-  end
+
 
   class TriangleError < StandardError
   end
+
 end
