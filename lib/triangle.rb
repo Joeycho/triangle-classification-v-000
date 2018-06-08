@@ -23,10 +23,13 @@ class Triangle
 
       if sum[0] <=self.sides[2]
         raise TriangleError
+      end
       if sum[1] <=self.sides[1]
         raise TriangleError
+      end
       if sum[2] <=self.sides[0]
         raise TriangleError
+      end
 
       self.sides.combination(3).to_a.each do
           |a,b,c|
