@@ -28,9 +28,12 @@ class Triangle
       if sum[2] <=self.sides[0]
         raise TriangleError
 
-        
+      self.sides.combination(2).to_a.select do
+          |a,b| a==b
+      end
 
-        
+
+
       end
     end
 
